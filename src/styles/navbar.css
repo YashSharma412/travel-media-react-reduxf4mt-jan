@@ -9,7 +9,7 @@
   grid-template-columns: repeat(3, 1fr);
   background-color: var(--clr__secondary);
   z-index: 100;
-  /* box-shadow: 2px 7px 16px 0 var(--clr__secondary_light); */
+  box-shadow: 2px 7px 16px 0 var(--clr__secondary_light);
 }
 
 .navbar .logo-container {

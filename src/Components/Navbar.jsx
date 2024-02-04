@@ -14,7 +14,9 @@ function Navbar() {
       <ul className="navOptions">
         
         <li className="active">
-          <img src={homeIcon} alt="home" />
+          <NavLink to="/">
+            <img src={homeIcon} alt="home" />
+          </NavLink>
         </li>
         <li>
           <img src={bellIcon} alt="bell" />
