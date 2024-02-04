@@ -9,6 +9,7 @@ const initialState = {
   data: [],
   error: "",
 };
+
 const postApiReducer = (state = initialState, action) => {
   switch (action.type) {
     case POST_API_STARTED:
@@ -30,6 +31,8 @@ const postApiReducer = (state = initialState, action) => {
         data: [],
         error: action.payload,
       };
+      default:
+        return state;
   }
 };
 

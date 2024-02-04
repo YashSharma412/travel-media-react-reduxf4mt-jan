@@ -21,7 +21,15 @@ export const postApiFailure = (error)=>{
 }
 
 // proxxy action => combines all the three actions above and sends it to store.
-
-function postApiRequest(){
-    
+export const postApiRequest = ()=>{
+    return async (dispatch)=>{
+        try{
+            dispatch(postApiStarted());
+            const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+            const data = await res.json();
+            dispatch(postApiSuccess(data));
+        } catch (error){
+            dispatch(postApiFailure(error.message));
+        }
+    }
 }
